@@ -33,7 +33,7 @@ char* readInBufFromFile(FILE* stream)
     perror(#filename);                                 \
     exit(EXIT_FAILURE);                                \
   }                                                   \
-  char* filename##_buf = readInBufFromFile(filename);  \
+  filename##_buf = readInBufFromFile(filename);  \
 }
 
 #endif //PUT_VARS_IN_BUF

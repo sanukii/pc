@@ -1,7 +1,9 @@
 #ifndef	READ_VAR 
 #define	READ_VAR
 
-void readVariants(char *buf);
+#include "description_structures.h"
+
+struct proc_and_vid* readVariants(char *buf);
 
 #endif
 
