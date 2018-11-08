@@ -7,7 +7,6 @@
 
 struct proc_and_vid* readVariants(char* buf)
 {
-	printf("%s\n", buf);
 	int num_read, char_ind = 0;
 	int num_of_elem = 0;
 	int elem_ind = 0;
@@ -19,8 +18,10 @@ struct proc_and_vid* readVariants(char* buf)
 	struct proc_and_vid* elem_array = 
 	(struct proc_and_vid*) calloc(num_of_elem, 
 	sizeof(struct proc_and_vid));
-
+		
 	char_ind = 0;
+	while(buf[char_ind] !='\0')
+	{
 	//read name
 	sscanf(&(buf[char_ind]), "%s%n", 
 	  elem_array[elem_ind].name, &num_read);
@@ -33,6 +34,30 @@ struct proc_and_vid* readVariants(char* buf)
 	  &(elem_array[elem_ind].freq), &num_read);
 	char_ind = char_ind + num_read;
 	
-	printf("%d\n", elem_array[elem_ind].freq);
+	printf("%d", elem_array[elem_ind].freq);
+	
+	//print freq_unit
 
+	sscanf(&(buf[char_ind]), "%s%n", 
+	 elem_array[elem_ind].freq_unit, &num_read);
+	char_ind = char_ind + num_read;
+	
+     printf("%s\n", elem_array[elem_ind].freq_unit);
+	
+	//print cost
+
+	sscanf(&(buf[char_ind]), "%d%n", 
+	  &(elem_array[elem_ind].cost), &num_read);
+	char_ind = char_ind + num_read;
+	
+	printf("%d", elem_array[elem_ind].cost);
+
+	
+	//print cost_unit
+	sscanf(&(buf[char_ind]), "%s%n", 
+	 elem_array[elem_ind].cost_unit, &num_read);
+	char_ind = char_ind + num_read;
+	
+     printf("%s\n", elem_array[elem_ind].cost_unit);
+	}
 }
