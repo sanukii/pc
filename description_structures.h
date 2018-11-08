@@ -1,10 +1,16 @@
 #ifndef DESCRIPTION_STRUCTUTES
 #define DESCRIPTION_STRUCTUTES
 
-const int name_len = 50; 
-const int unit_name_len = 10;
-const int freq_name_len = 10;
-const int size_name_len = 3;
+#include <stdlib.h>
+#include <stdio.h>
+
+enum lenght
+{
+	name_len = 50,
+	unit_name_len = 10,
+	freq_name_len = 10,
+	size_name_len = 5  //RAM
+};
 
 struct proc
 {
@@ -16,9 +22,7 @@ struct proc
 	int	freq;
 	char	freq_unit[freq_name_len];
 
-	bool	suit games;
-	bool 	suit science;
-	bool 	suit ofice;
+	int	suit;
 };
 
 struct ram
@@ -31,9 +35,7 @@ struct ram
 	int	size;
 	char	size_unit[size_name_len];
 
-	bool	suit games;
-	bool 	suit science;
-	bool 	suit ofice;
+	int	suit;
 };
 
 struct vid
@@ -46,9 +48,7 @@ struct vid
 	int	freq;
 	char	freq_unit[freq_name_len];
 
-	bool	suit games;
-	bool 	suit science;
-	bool 	suit ofice;
+	int	suit;
 
 };
 

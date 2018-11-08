@@ -6,7 +6,7 @@
 
 #include "description_structures.h"
 
-#include "read_variants_func.h"
+#include "readVariants.h"
 
 int main(int argc, char* argv[])
 {
