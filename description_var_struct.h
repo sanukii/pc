@@ -2,7 +2,6 @@
 #define DESCRIPTION_STRUCTUTES
 
 #include <stdlib.h>
-#include <stdio.h>
 
 enum lenght
 {

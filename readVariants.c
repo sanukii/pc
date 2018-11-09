@@ -28,14 +28,14 @@ struct proc_and_vid* readVariants(char* buf)
 	
 	printf("%s\n", elem_array[elem_ind].name);
 
-	//print freq
+	//read freq
 	sscanf(&(buf[char_ind]), "%d%n", 
 	  &(elem_array[elem_ind].freq), &num_read);
 	char_ind = char_ind + num_read;
 	
 	printf("%d", elem_array[elem_ind].freq);
 	
-	//print freq_unit
+	//read  freq_unit
 
 	sscanf(&(buf[char_ind]), "%s%n", 
 	 elem_array[elem_ind].freq_unit, &num_read);
@@ -43,7 +43,7 @@ struct proc_and_vid* readVariants(char* buf)
 	
      printf("%s\n", elem_array[elem_ind].freq_unit);
 	
-	//print cost
+	//read cost
 
 	sscanf(&(buf[char_ind]), "%d%n", 
 	  &(elem_array[elem_ind].cost), &num_read);
@@ -52,7 +52,7 @@ struct proc_and_vid* readVariants(char* buf)
 	printf("%d", elem_array[elem_ind].cost);
 
 	
-	//print cost_unit
+	//read cost_unit
 	sscanf(&(buf[char_ind]), "%s%n", 
 	 elem_array[elem_ind].cost_unit, &num_read);
 	char_ind = char_ind + num_read;
