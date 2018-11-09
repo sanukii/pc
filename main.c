@@ -25,6 +25,7 @@ int main(int argc, char* argv[])
 
 	struct proc_and_vid* proc_array = readVariants(proc_variants_buf);
 	struct proc_and_vid* vid_array	= readVariants(vid_variants_buf);
+	struct question* qst_array = readQuestions(questions_buf);	
 	
 
 	return 0;

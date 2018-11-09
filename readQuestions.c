@@ -18,7 +18,7 @@ struct question* readQuestions(char* qst)
 	sizeof(struct question));
 
 	char_ind = 0;	
-	while(qst[char_ind] !='\0')
+	while(qst[char_ind] != '\0')
 	{
 	//read question
 	sscanf(&(qst[char_ind]), "%s%n", 
@@ -32,17 +32,18 @@ struct question* readQuestions(char* qst)
   &(qst_array[quest_ind].low_freq_proc), &num_read);
 	char_ind = char_ind + num_read;
 	
-   printf("%d", qst_array[quest_ind].low_freq_proc);
+   printf("%d\n", qst_array[quest_ind].low_freq_proc);
 	
 	//read  low_freq_vid
 
-		sscanf(&(qst[char_ind]), "%d%n", 
-      			&(qst_array[quest_ind].low_freq_vid), &num_read);
-		char_ind = char_ind + num_read;
+	sscanf(&(qst[char_ind]), "%d%n", 
+      		&(qst_array[quest_ind].low_freq_vid), &num_read);
+	char_ind = char_ind + num_read;
 	
-  		printf("%d\n", qst_array[quest_ind].low_freq_vid);
+  	printf("%d\n", qst_array[quest_ind].low_freq_vid);
 	
-	}
+	
+    }	
 
 	return qst_array;
 } 	
