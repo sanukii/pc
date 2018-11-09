@@ -3,7 +3,6 @@
 #include <assert.h>
 
 #include "readVariants.h"
-#include "description_structures.h"
 
 struct proc_and_vid* readVariants(char* buf)
 {
@@ -58,6 +57,8 @@ struct proc_and_vid* readVariants(char* buf)
 	 elem_array[elem_ind].cost_unit, &num_read);
 	char_ind = char_ind + num_read;
 	
-     printf("%s\n", elem_array[elem_ind].cost_unit);
+     	printf("%s\n", elem_array[elem_ind].cost_unit);
 	}
+
+	return elem_array;
 }

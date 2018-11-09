@@ -1,5 +1,5 @@
-HEADERS = putVarsInBuf.h description_structures.h readVariants.h
-SOURCES	= main.c readVariants.c
+HEADERS = putVarsInBuf.h description_var_struct.h readVariants.h readQuestions.h
+SOURCES	= main.c readVariants.c readQuestions.c
 
 all: pc_compilation
 
