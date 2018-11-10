@@ -3,7 +3,7 @@
 
 #include "readQuestions.h"
 
-struct question* readQuestions(char* qst)
+struct question* readQuestions(char* qst, int* num_qst)
 {
 	int num_read, char_ind = 0;
 	int num_of_quest = 0;

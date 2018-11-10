@@ -3,7 +3,7 @@
 
 #include "description_var_struct.h"
 
-struct proc_and_vid* readVariants(char *buf);
+struct proc_and_vid* readVariants(char *buf, int* num_elem);
 
 #endif
 

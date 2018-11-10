@@ -4,7 +4,7 @@
 
 #include "readVariants.h"
 
-struct proc_and_vid* readVariants(char* buf)
+struct proc_and_vid* readVariants(char *buf, int* num_elem)
 {
 	int num_read, char_ind = 0;
 	int num_of_elem = 0;

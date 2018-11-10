@@ -3,6 +3,6 @@
  
 #include "description_qst_struct.h"
 
-struct question* readQuestions(char*  qst_buf);
+struct question* readQuestions(char*  qst_buf, int* num_qst);
 
 #endif 
